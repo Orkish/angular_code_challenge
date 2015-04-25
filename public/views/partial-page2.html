@@ -1,0 +1,93 @@
+<h1 class="main-headline">Headline</h1>
+
+<div class="breadcrumb-container">
+  <ol>
+    <li>
+      <div>Lorem</div>
+    </li>
+    <li>
+      <div>Ipsum</div>
+    </li>
+    <li class="light-green-nav">
+      <div>Lorem</div>
+    </li>
+    <li class="orange-nav">
+      <div>Ipsum</div>
+    </li>
+    <li class="red-nav">
+      <div>Lorem</div>
+    </li>
+    <li class="grey-nav">
+      <div>Ipsum</div>
+    </li>
+  </ol>
+</div>
+
+<div ng-controller="BrandCtrl">
+  <accordion close-others="oneAtATime">
+    <accordion-group is-open="status.open" ng-repeat="brand in brandsData">
+    	<!-- loop for brandsData -->
+    	<accordion-heading>
+    		<span ng-bind="brand.title"></span>
+    		<span class="percent-block" ng-repeat="step in brand.steps">
+
+    			<!-- shows the percentages in the accordion -->
+    			<span class="accordion-percent" ng-repeat="content in step.stepContent | limitTo:1">
+
+	    			<!-- sets background color for percentages -->
+	    			<span class="step-content-container" ng-class="{hundred: content.stepPercent == '100%', ninetynine: content.stepPercent == '99%', zero: content.stepPercent === '0%'}">
+	    				<span class="step-num" ng-bind="step.stepNum"></span>  
+	    				<span ng-bind="content.stepPercent"></span>
+    				</span>
+    			</span>
+    		</span>
+
+    		<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-up': status.open, 'glyphicon-chevron-down': !status.open}"></i>
+    	</accordion-heading>
+
+      <br>
+
+      <ul class="step-ul">
+	      <li class="step-list" ng-repeat="step in brand.steps">
+	      <!-- this is the list items for each step -->
+	      	<div class="step-number">
+	      		<span class="step-lines"></span> 
+	      		<span class="step-circle" ng-bind="step.stepNum"></span> 
+	      		<span class="step-lines"></span>
+	      	</div>
+	      	<div class="step-content" ng-repeat="content in step.stepContent">
+	      		<div class="content-header" ng-controller="EventCtrl" ng-click="pageTwoEvents.showTools()" ui-sref=".tools">
+	      			<span class="step-header" ng-bind="content.stepHeader"></span>
+	      		</div>
+	      		<div class="percent-holder" ng-class="{hundred: content.stepPercent == '100%', ninetynine: content.stepPercent == '99%', zero: content.stepPercent === '0%'}">
+	      			<div ng-bind="content.stepPercent"></div>
+	      		</div>
+	      		<div ng-controller="EventCtrl">
+	      			<div class="run-btn" ng-click="pageTwoEvents.showNested($event)">Run</div>
+	      		</div>
+	      	</div>
+	      	<div class="arrow"></div>
+	      </li>
+      </ul>
+      <!-- sub partial view for tools -->
+      <div ui-view></div>
+    </accordion-group>
+  </accordion>
+
+</div>
+
+<div class="btn-container" ng-controller="EventCtrl">
+	<button ng-click="pageTwoEvents.btnPress()" class="teal-btn">Lorem Ipsum</button>
+	<button ng-click="pageTwoEvents.btnPress()" class="grey-btn">Lorem Ipsum</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+

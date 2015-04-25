@@ -1,0 +1,308 @@
+/* app level */
+
+body {
+	background: #d1d8d4;
+}
+
+.main-content {
+	padding: 3%;
+}
+
+a.accordion-toggle:hover {
+  text-decoration: none;
+}
+
+ul.nav.navbar-nav {
+  margin-left: 10%;
+}
+
+/* page 2 */
+
+.main-headline {
+	color: #4c5b52;
+	font-family: serif;
+}
+
+ul.sub-nav {
+	border: 1px solid;
+  width: 100% !important;
+}
+
+ul.sub-nav li {
+	width: 16.66%;
+}
+
+/* top nav */
+
+nav.navbar.main-nav {
+  background: #4c5b52;
+  border-radius: 0;
+}
+
+li.nav-pages a {
+  color: #fff;
+}
+
+li.nav-pages a:hover, li.nav-pages a:active {
+  background: #6a8012 !important;
+}
+
+/* breadcrumb styles */
+
+.breadcrumb-container {
+  background: #fff;
+  padding: 10px 15px;
+  margin-bottom: 2%;
+}
+
+div.main {
+  margin-right:30px;
+}
+
+ol > li {        
+	display: table-cell;
+	height: 30px;        
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+ol > li > div {         
+  position: relative;        
+  line-height: 30px; /* equal to the list item's height */
+  height:100%;
+  width: 100%;         
+}
+
+ol > li {
+  background-color: #6a8012;
+  color: #fff;
+  font-family: serif;
+  font-size: 18px;
+}
+
+ol > li.light-green-nav {
+	background-color: #a2ad00;
+}
+
+ol > li.light-green-nav > div:before {
+	border-color: transparent transparent transparent #a2ad00;
+}
+
+ol > li.orange-nav {
+	background-color: #f3ae00;
+}
+
+ol > li.orange-nav > div:before {
+	border-color: transparent transparent transparent #f3ae00;	
+}
+
+ol > li.red-nav {
+	background-color: #bc2e2e;
+}
+
+ol > li.red-nav > div:before {
+	border-color: transparent transparent transparent #bc2e2e;	
+}
+
+ol > li.grey-nav {
+	background-color: #a5ada8;
+}
+
+ol > li.grey-nav > div:before, ol > li.grey-nav > div:after {
+	border-color: transparent;		
+}
+
+ol {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+}
+
+ol > li > div:after, ol > li > div:before {
+  content:"";
+  display:inline-block;        
+  border-width: 18px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  width: 0px;
+  height: 0px;
+  left: 100%;
+  top: -3px;        
+  position: absolute;        
+  z-index: 1;
+}
+
+ol > li > div:before {
+  border-width: 14px;
+  display: block;
+  border-color: transparent transparent transparent #6a8012;
+  z-index: 2;
+  top:1px;
+}
+
+/* accordion styles */
+
+.panel-body {
+  text-align: center;
+}
+
+.panel-heading {
+  background-color: #4c5b52 !important;
+  color: #fff !important;
+}
+
+span.step-content-container {
+  width: 90px;
+  display: inline-block;
+  padding: 4% 0;
+  text-align: center;
+}
+
+.hundred {
+	background: #6a8012;
+}
+
+.ninetynine {	
+	background: #a2ad00;
+}
+
+.zero {
+	background: #a5ada8;
+}
+
+span.percent-block {
+  color: #fff;
+  margin: 0 1%;
+  padding: 3px;
+  display: inline-block;
+}
+
+span.step-num.ng-binding {
+  background: #4c5b52;
+  padding: 2px;
+  border-radius: 15px;
+  display: inline-block;
+  width: 21px;
+  text-align: center;
+}
+
+span.accordion-percent {
+  width: 100%;
+  display: inline-block;
+}
+
+/* step styles */
+
+.step-ul {
+	padding: 0;
+}
+
+span.step-circle {
+  background: #4c5b52;
+  width: 25px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+span.step-lines {
+  display: inline-block;
+  border: 1px solid #4c5b52;
+  width: 17%;
+}
+
+li.step-list {
+  /*border: 1px solid;*/
+  float: left;
+  list-style: none;
+  width: 33.33%;
+}
+
+.step-content {
+	display: inline-block;
+  border: 2px solid #bbbdbf;
+  text-align: center;
+  width: 44%;
+  margin: 3%;
+}
+
+.step-header{
+  font-family: serif;
+  font-size: 18px;
+}
+
+.content-header {
+  border-bottom: 1px solid #bbbdbf;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.percent-holder {
+    width:50%;
+    margin: 7px auto;
+    border-radius: 50%;
+}
+.percent-holder:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.percent-holder div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+
+.run-btn {
+  background: #1f9faa;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* bottom buttons styles */
+
+button.teal-btn {
+  background: #1f9faa;
+  color: #fff;
+  width: 48%;
+  padding: 2%;
+  box-shadow: none;
+  border: 0;
+  border-radius: 10px;
+}
+
+button.grey-btn {
+  background: #a5ada8;
+  color: #fff;
+  width: 48%;
+  margin-left: 3%;
+  padding: 2%;
+  box-shadow: none;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* tools partial styles */
+
+.tools-list {
+	list-style: none;
+}
+
+
+
+
+
+
+
